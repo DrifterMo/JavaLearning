@@ -3,7 +3,7 @@
  * @date 2023/2/1 20:17
  */
 public class Stars {
-    public static void main(String args[]){
+    public static void main(String[] args){
         /*
 
              *
@@ -44,25 +44,23 @@ public class Stars {
          *     *    // 第4行2个            1+3=4个空格
         *********   // 第5行9个            0+0个空格
          */
-        for (int i=1; i <= 8; i++){ // i表示层数
+        int totalLevel = 20;
+        for (int i=1; i <= totalLevel; i++){ // i表示层数
+
             // 空格数
-            for (int k = 1; k <= 8-i; k++){
+            for (int k = 1; k <= totalLevel-i; k++){
                 System.out.print(' ');
             }
-            if (i != 8) {
+
                 // 控制* 数量
                 for (int j = 1; j <= 2 * i - 1; j++) {
-                    if (j == 1 || j == 2 * i - 1) {
+                    if (j == 1 || j == 2 * i - 1 || i == totalLevel) {
                         System.out.print('*');
                     } else {
                         System.out.print(' ');
                     }
 
                 }
-            }
-            else {
-                System.out.print();
-            }
             System.out.print('\n');
         }
 
