@@ -3,7 +3,7 @@
  * @date 2023/2/1 14:06
  */
 public class ForceConvertDetail {
-    public static void main(String args[]){
+    public static void main(String[] args){
 
         // 演示强转类型转换
         // 强转符号只针对于最近的操作数有效，往往会使用小括号来提升优先级
