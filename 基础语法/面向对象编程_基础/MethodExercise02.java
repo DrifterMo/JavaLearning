@@ -24,7 +24,7 @@ public class MethodExercise02 {
     }
 }
 
-class Person{
+class Person {
     String name;
     int age;
 }
