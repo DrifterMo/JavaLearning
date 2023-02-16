@@ -1,4 +1,4 @@
-package 面向对象编程_基础;
+package objectBase;
 
 /**
  * @Author

@@ -1,4 +1,4 @@
-package 二维数组;
+package twoDimensionalArray;
 
 import java.util.Scanner;
 
