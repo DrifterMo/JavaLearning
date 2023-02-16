@@ -26,7 +26,7 @@ class RecursionMonth{
     /**
      * 请使用递归的方式求出斐波那契数 1,1,2,3,5,8,13.....
      * 给你一个整数n，求出他的值是多少
-     *
+     * <p>
      * 规律： 从第三项开始，每项等于前两项之和
      * n = 1, 1
      * n = 2, 1
@@ -35,7 +35,7 @@ class RecursionMonth{
      */
 
     public int fibonacciSequence(int n){
-        if (n == 1 || n ==2){
+        if (n == 1 || n == 2){
             return 1;
         }else {
             //fibonacciSequence(n - 1);
@@ -50,7 +50,7 @@ class RecursionMonth{
      * 以后每天猴子都吃其中的一半，然后再多吃一个。当到第10天时，想再吃时（即还没吃）
      * 发现只有1个桃子了。
      * 问题：最初共有多少个桃子？    n个桃子
-     *
+     * <p>
      * day = 10, 1个桃
      * day = 9,  (day10 +1)*2 = 4
      * day = 8   (day9 +1 ) *2 = 10
