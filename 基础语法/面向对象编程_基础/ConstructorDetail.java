@@ -51,6 +51,7 @@ class ConstructorDetailPerson{
     }
 
     public ConstructorDetailPerson(String pName){
+
         name = pName;
     }
 }
