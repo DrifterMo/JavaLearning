@@ -17,5 +17,63 @@ public class AccountTest {
     private double balance;
     private String password;
 
+    public AccountTest(String name, double banlance, String password) {
+        setName(name);
+        setBanlance(banlance);
+        setPassword(password);
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * 设置名字
+     * @param name   名字 2-4
+     */
+    public void setName(String name) {
+        if (name.length() >= 2 && name.length() <= 4){
+            this.name = name;
+        }else {
+            System.out.println("请输入正确的名字（2-4个字符）！！！！");
+        }
+
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    /**
+     * 设置余额数
+     * @param banlance: 余额，必须大于20
+     */
+    public void setBanlance(double banlance) {
+        if (banlance >= 20){
+            this.balance = banlance;
+        } else if (banlance < 0) {
+            System.out.println("请输入正确余额！！！");
+        }else {
+            System.out.println("余额必须大于20！！！！！！");
+        }
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * 设置密码
+     * @param password: 必须6位
+     */
+    public void setPassword(String password) {
+        if (password.length() == 6){
+            this.password = password;
+        } else if (password.length() != 0) {
+            this.name = "123456";
+            System.out.println("密码长度错误，设置默认密码为：123456");
+        }else {
+            System.out.println("请输入密码！！！！");
+        }
+    }
 }
