@@ -22,12 +22,7 @@ public class Base extends TopBase{
     //有参构造器
     public Base(String name, int age){
         //默认 super()
-        System.out.println("父亲 Base(String name, int age)构造器被调用....");
-    }
-
-    //有参构造器
-    public Base(String name){
-        System.out.println("父类 Base(String name) 构造器被调用....");
+        System.out.println("父亲 Base(String name)构造器被调用....");
     }
 
     public int getN4() {
