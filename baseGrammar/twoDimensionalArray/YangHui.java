@@ -58,9 +58,9 @@ public class YangHui {
 
         // 循环打印数组
         System.out.println("------杨辉三角------");
-        for (int[] ints : arr) {
-            for (int j = 0; j < ints.length; j++) {
-                System.out.print(ints[j] + " ");
+        for (int i = 0; i < arr.length; i++){
+            for (int j = 0; j < arr[i].length; j++){
+                System.out.print(arr[i][j] + " ");
             }
             System.out.println();
         }
