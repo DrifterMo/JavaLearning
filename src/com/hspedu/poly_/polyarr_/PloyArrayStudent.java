@@ -23,11 +23,11 @@ public class PloyArrayStudent extends PloyArrayPerson{
         //重写父类 say
         @Override
         public String say(){
-                return "学生 " + super.say() + "score = " + score;
+                return "学生 " + super.say() + " score = " + score;
         }
 
         public void study(){
-                System.out.println("学生 " + getName() + "正在学 java....");
+                System.out.println("学生 " + getName() + " 正在学 java....");
         }
 
 }

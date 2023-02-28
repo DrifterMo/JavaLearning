@@ -23,7 +23,7 @@ public class PloyArrayTeacher extends PloyArrayPerson{
     //重写父类的 say 方法
     @Override
     public String say(){
-        return "老师 " + super.say() + "salary " + salary;
+        return "老师 " + super.say() + " salary " + salary;
     }
 
     //特有方法
