@@ -5,8 +5,17 @@ package com.hspedu.object_;
  * @date 2023/3/2 10:58
  */
 public class EqualsExercise {
+    public static void main(String[] args) {
+        EqualsExercisePerson person1 = new EqualsExercisePerson("jack", 10,'男');
+        EqualsExercisePerson person2 = new EqualsExercisePerson("jack",20,'男');
+        System.out.println(person1.equals(person2));
+    }
 }
 
+/*
+判断两个Person 对象的内容是否相等，
+如果两个 Person 对象的各个属性值都一样，则返回 true, 反之 false
+ */
 class EqualsExercisePerson{ //extends Object
     private String name;
     private int age;
@@ -42,5 +51,19 @@ class EqualsExercisePerson{ //extends Object
         this.name = name;
     }
 
+    public int getAge(){
+        return age;
+    }
 
+    public void setAge(int age){
+        this.age = age;
+    }
+
+    public char getGender() {
+        return gender;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
 }
