@@ -7,6 +7,11 @@ package com.hspedu.static_;
 public class StaticMethodDetail {
     public static void main(String[] args) {
 
+        StaticMethodDetailD.hi();   //ok
+
+        //非静态方法，不能通过类名调用
+        //StaticMethodDetailD.say() //错误，需要先创建对象，再调用
+        new StaticMethodDetailD().say();    //可以
     }
 }
 
@@ -32,10 +37,16 @@ class StaticMethodDetailD{
         hi();   //OK
         //say;  //错误
     }
+
     //普通成员方法，既可以访问、非静态成员，也可以访问
-    //小结：非静态方法可以访问  经中成药和非静态成员
+    //小结：非静态方法可以访问  静态成员和非静态成员
     public void ok(){
-        //非静态成员 使用试用头疼，=out
+        //非静态成员
+        System.out.println(n1);
+        say();
+        //静态成员
+        System.out.println(n2);
+        hello();
 
     }
 }
