@@ -10,7 +10,7 @@ public class CodeBlockDetail04 {
         //(2) 创建对象
         //2.1 从子类的构造器开始
         new CodeBlockDetail04_B02();//对象
-        new CodeBlockDetail04_C02();
+        //new CodeBlockDetail04_C02();
     }
 }
 
@@ -79,6 +79,7 @@ class CodeBlockDetail04_B02 extends CodeBlockDetail04_A02{
         System.out.println("CodeBlockDetail04_B02 的一个静态代码块...");
     }
     public int n5 = getVal04();
+
     {
         System.out.println("CodeBlockDetail04_B02 的第一个普通代码块...");
     }
