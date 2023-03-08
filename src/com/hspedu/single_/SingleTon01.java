@@ -3,6 +3,10 @@ package com.hspedu.single_;
 /**
  * @date 2023/3/8 13:10
  */
+
+/*
+饿汉式
+ */
 public class SingleTon01 {
     public static void main(String[] args) {
         //GirlFriend xh = new GirlFriend("小红");
