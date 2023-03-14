@@ -9,8 +9,8 @@ public class Integer01 {
         //jdk5 前是手动装箱和拆箱
         //手动装箱 int -> Integer
         int n1 = 100;
-        Integer integer = new Integer(n1);
-        Integer integer1 = Integer.valueOf(n1);
+        Integer integer = new Integer(n1);  // 写法1
+        Integer integer1 = Integer.valueOf(n1); //写法2
 
         //手动拆箱
         //Integer -> int
