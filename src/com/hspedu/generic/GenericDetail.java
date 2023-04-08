@@ -19,6 +19,38 @@ public class GenericDetail {
         aPig.f();
         Pig<A> aPig2 = new Pig<A>(new B());
         aPig2.f();
+
+        //3.泛型的使用形式
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        List<Integer> list2 = new ArrayList<Integer>();
+        //在实际开发中，我们往往简写
+        //编译器会进行类型推断, 推荐使用下面写法
+        ArrayList<Integer> list3 = new ArrayList<>();
+        List<Integer> list4 = new ArrayList<>();
+        ArrayList<Pig> pigs = new ArrayList<>();
+
+        //4.如果这样写 泛型默认是Object
+        ArrayList arrayList = new ArrayList();//等价 ArrayList<Object> arrayList = new ArrayList<Object>();
+        /*
+            public boolean add(Object e) {
+                ensureCapacityInternal(size + 1); // Increments modCount!!
+                elementData[size++] = e;
+                return true;
+        }
+        */
+        Tiger tiger = new Tiger();
+
+        /*
+            class Tiger {//类
+                Object e;
+
+                public Tiger() {}
+
+                public Tiger(Object e) {
+                    this.e = e;
+                }
+            }
+         */
     }
 }
 
