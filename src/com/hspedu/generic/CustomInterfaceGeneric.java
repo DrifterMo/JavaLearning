@@ -21,6 +21,64 @@ interface IA extends IUsb<String, Double>{
 
 }
 
+//当我们去实现 IA 接口是，因为 IA 在继承 IUsb接口时，指定了 U 为 String R 为 Double，
+//在实现 IUsu 接口的方法时，使用 String 替换 U, 是 Double 替换 R
+class AA implements IA{
+    @Override
+    public Double get(String s) {
+        return null;
+    }
+
+    @Override
+    public void hi(Double aDouble) {
+
+    }
+
+    @Override
+    public void run(Double r1, Double r2, String u1, String u2) {
+
+    }
+}
+
+
+//实现接口时，直接指定泛型接口的类型
+//给 U 指定 Integer 给 R 指定了 Float
+//所以，当我们实现 IUsb 方法时，会使用 Integer 替换 U, 使用 Float 替换 R
+class BB implements IUsb<Integer, Float>{
+    @Override
+    public Float get(Integer integer) {
+        return null;
+    }
+
+    @Override
+    public void hi(Float aFloat) {
+
+    }
+
+    @Override
+    public void run(Float r1, Float r2, Integer u1, Integer u2) {
+
+    }
+}
+
+//没有指定类型，默认为 Object
+//建议直接写成 IUsb<Object, Object>
+class CC implements IUsb{//等价 class CC implements IUsb<Object,Object>{
+    @Override
+    public Object get(Object o){
+        return null;
+    }
+
+    @Override
+    public void hi(Object o) {
+
+    }
+
+    @Override
+    public void run(Object r1, Object r2, Object u1, Object u2) {
+
+    }
+}
 
 interface IUsb<U,R>{
     int n = 10;
