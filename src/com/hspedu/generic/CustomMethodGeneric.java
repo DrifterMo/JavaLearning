@@ -1,11 +1,21 @@
 package com.hspedu.generic;
 
+import java.util.ArrayList;
+
 /**
  * @date 2023/4/10
  */
 public class CustomMethodGeneric {
     public static void main(String[] args) {
+        Car car = new Car();
+        car.fly("宝马", 100);
+        System.out.println("===========");
+        car.fly(300, 100.1);
 
+        //测试
+        //T -> String, R -> ArrayList
+        Fish<String, ArrayList> fish = new Fish<>();
+        fish.hello(new ArrayList(), 11.3f);
     }
 }
 
