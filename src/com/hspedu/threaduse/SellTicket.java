@@ -13,14 +13,20 @@ public class SellTicket {
         //sellTick02.start();
         //sellTick03.start();
 
-        System.out.println("=====使用实现接口方式来售票========");
-        SellTicket02 sellTicket02 = new SellTicket02();
-        //第 1 个线程 —— 窗口
-        new Thread(sellTicket02).start();
-        //第 2 个线程 —— 窗口
-        new Thread(sellTicket02).start();
-        //第 3 个线程 —— 窗口
-        new Thread(sellTicket02).start();
+        //System.out.println("=====使用实现接口方式来售票========");
+        //SellTicket02 sellTicket02 = new SellTicket02();
+        ////第 1 个线程 —— 窗口
+        //new Thread(sellTicket02).start();
+        ////第 2 个线程 —— 窗口
+        //new Thread(sellTicket02).start();
+        ////第 3 个线程 —— 窗口
+        //new Thread(sellTicket02).start();
+
+
+        SellTicket03 sellTicket03 = new SellTicket03();
+        new Thread(sellTicket03).start();
+        new Thread(sellTicket03).start();
+        new Thread(sellTicket03).start();
     }
 }
 
@@ -70,6 +76,12 @@ class SellTicket03 implements Runnable{
 
     }
 
+    @Override
+    public void run() {
+        while (loop){
+            sell(); //sell方法是一共同步方法
+        }
+    }
 }
 
 
