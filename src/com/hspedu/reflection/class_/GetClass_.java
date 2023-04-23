@@ -41,5 +41,13 @@ public class GetClass_ {
         Class<Boolean> booleanClass = boolean.class;
         Class<Float> floatClass = float.class;
         System.out.println(integerClass);
+
+        //6、基本数据类型对应的包装类，可以通过 .TYPE 得到 Class 对象
+        Class<Integer> type1 = Integer.TYPE;
+        Class<Character> type2 = Character.TYPE;    //其他包装类 BOOLEAN, DOUBLE,LONG 等待
+        System.out.println(type1);
+
+        System.out.println(integerClass.hashCode());    //2133927002
+        System.out.println(type1.hashCode());   //2133927002
     }
 }
