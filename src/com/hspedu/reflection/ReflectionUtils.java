@@ -59,12 +59,77 @@ public class ReflectionUtils {
         }
         //getMethods:获取所有 public 修饰的方法，包含本类和父类的
         Method[] methods = personCls.getMethods();
-        for (Method method: methods){
+        for (Method method : methods) {
             System.out.println("本类中所有方法 = " + method.getName());
         }
+        //getDeclaredMethods:获取本类中所有方法
+        Method[] declaredMethods = personCls.getDeclaredMethods();
+        for (Method declaredMethod: declaredMethods){
+            System.out.println("本类中所有方法=" + declaredMethod.getName());
+        }
+        //getConstructors: 获取所有 public 修饰的构造器，包含本类
+
     }
 }
 
 class A {
-    public String hobby
+    public String hobby;
+
+    public void hi() {
+
+    }
+
+    public A() {
+
+    }
+
+    public A(String name) {
+
+    }
+}
+
+interface IA {
+
+}
+
+interface IB {
+
+}
+
+class Person extends A implements IA, IB {
+    //属性
+    public String name;
+    protected static int age;
+    String job;
+    private double sal;
+
+    //构造器
+    public Person() {
+
+    }
+
+    public Person(String name) {
+
+    }
+
+    private Person(String name, int age) {
+
+    }
+
+    //方法
+    public void m1(String name, int age, double sal) {
+
+    }
+
+    protected String m2() {
+        return null;
+    }
+
+    void m3() {
+
+    }
+
+    private void m4() {
+
+    }
 }
