@@ -2,6 +2,7 @@ package com.hspedu.reflection;
 
 import org.junit.Test;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
@@ -23,7 +24,7 @@ public class ReflectionUtils {
         for (Field declaredField : declaredFields) {
             System.out.println("本类中所有属性 = " + declaredField.getName()
                     + " 该属性的修饰符=" + declaredField.getModifiers()
-                    + " 该属性的类型=" + declaredField.getReturnType();
+                    + " 该属性的类型=" + declaredField.getType());
         }
 
         //getDeclaredMethods: 获取本类中所有方法
@@ -31,7 +32,7 @@ public class ReflectionUtils {
         for (Method declaredMethod : declaredMethods) {
             System.out.println("本类中所有方法 = " + declaredMethod.getName()
                     + " 该方法的访问修饰符=" + declaredMethod.getModifiers()
-                    + " 该方法返回类型=" + declaredMethod.getru();
+                    + " 该方法返回类型=" + declaredMethod.getReturnType());
         }
 
 
@@ -64,11 +65,24 @@ public class ReflectionUtils {
         }
         //getDeclaredMethods:获取本类中所有方法
         Method[] declaredMethods = personCls.getDeclaredMethods();
-        for (Method declaredMethod: declaredMethods){
+        for (Method declaredMethod : declaredMethods) {
             System.out.println("本类中所有方法=" + declaredMethod.getName());
+
         }
         //getConstructors: 获取所有 public 修饰的构造器，包含本类
+        Constructor<?>[] constructors = personCls.getConstructors();
+        for (Constructor<?> constructor : constructors) {
+            System.out.println("本类的构造器 = " + constructor.getName());
+        }
+        //getDeclaredConstructors:获取本类中所有构造器
+        Constructor<?>[] declaredConstructors = personCls.getDeclaredConstructors();
+        for (Constructor<?> declaredConstructor : declaredConstructors) {
+            System.out.println("本类中所有构造器=" + declaredConstructor.getName());
 
+        }
+        //getPackage: 以Package 形式，返回 包信息
+        System.out.println(personCls.getPackage());
+        //getSuperClass:以 Class 形式返回父类信息
     }
 }
 
