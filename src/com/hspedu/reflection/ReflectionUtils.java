@@ -33,6 +33,23 @@ public class ReflectionUtils {
             System.out.println("本类中所有方法 = " + declaredMethod.getName()
                     + " 该方法的访问修饰符=" + declaredMethod.getModifiers()
                     + " 该方法返回类型=" + declaredMethod.getReturnType());
+            //输出当前这个方法的形参数组情况
+            Class<?>[] parameterTypes = declaredMethod.getParameterTypes();
+            for (Class<?> parameterType: parameterTypes){
+                System.out.println("该方法的形参类型="+parameterType);
+            }
+        }
+
+        //getDeclaredConstructors: 获取本类中所有构造器
+        Constructor<?>[] declaredConstructors = personCls.getDeclaredConstructors();
+        for (Constructor<?> declaredConstructor: declaredConstructors){
+            System.out.println("===================");
+            System.out.println("本类中所有构造器=" + declaredConstructor.getName());
+
+            Class<?>[] parameterTypes = declaredConstructor.getParameterTypes();
+            for (Class<?> parameterType : parameterTypes){
+                System.out.println("该构造器的形参类型=" + parameterType);
+            }
         }
 
 
